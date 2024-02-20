@@ -1,0 +1,15 @@
+[color]
+        ui = auto
+[gc]
+        pruneexpire = 90 days
+[alias]
+        ame = commit --amend --no-edit
+        diffc = diff --cached
+        com = commit -v
+        lol = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%cn <%ce>%Creset %s'
+        lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%cn <%ce>%Creset %s\"
+[diff]
+        algorithm = patience
+[rerere]
+        enabled = true
+
