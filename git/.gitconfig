@@ -13,6 +13,5 @@
 	algorithm = patience
 [rerere]
 	enabled = true
-
 [core]
 	autocrlf = input
