@@ -17,3 +17,5 @@
 [core]
 	autocrlf = input
 	ignorecase = false
+[init]
+	defaultBranch = main
