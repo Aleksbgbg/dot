@@ -1,6 +1,6 @@
-bat 		https://github.com/sharkdp/bat				better cat
-eza 		https://github.com/eza-community/eza 			better ls
-fd 		https://github.com/sharkdp/fd 				better find
-fzf 		https://github.com/junegunn/fzf 			command-line fuzzy finder
-ripgrep 	https://github.com/BurntSushi/ripgrep 			better grep
-zoxide		https://github.com/ajeetdsouza/zoxide			smarter cd
+bat             https://github.com/sharkdp/bat                      better cat
+eza             https://github.com/eza-community/eza                better ls
+fd              https://github.com/sharkdp/fd                       better find
+fzf             https://github.com/junegunn/fzf                     command-line fuzzy finder
+ripgrep         https://github.com/BurntSushi/ripgrep               better grep
+zoxide          https://github.com/ajeetdsouza/zoxide               smarter cd
