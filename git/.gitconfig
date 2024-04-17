@@ -1,7 +1,3 @@
-[color]
-	ui = auto
-[gc]
-	pruneexpire = 90 days
 [alias]
 	ame = commit --amend --no-edit
 	bla = blame -w -C -C -C
@@ -11,12 +7,16 @@
 	lol = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%cn <%ce>%Creset %s'
 	lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%cn <%ce>%Creset %s\"
 	swi = switch -c
-[diff]
-	algorithm = patience
-[rerere]
-	enabled = true
+[color]
+	ui = auto
 [core]
 	autocrlf = input
 	ignorecase = false
+[diff]
+	algorithm = patience
 [init]
 	defaultBranch = main
+[gc]
+	pruneexpire = 90 days
+[rerere]
+	enabled = true
