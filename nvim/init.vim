@@ -17,4 +17,10 @@ set shiftwidth=2 " Replace tabs with 2 spaces
 set ignorecase " Note that this applies to substitutions as well
 set smartcase
 
+" Remap hjkl to home row
+nnoremap ; l
+nnoremap l k
+nnoremap k j
+nnoremap j h
+
 lua require("init")
