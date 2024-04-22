@@ -19,3 +19,19 @@ require("lazy").setup({
 
 -- Catpuccin colour scheme
 vim.cmd.colorscheme "catppuccin-frappe"
+
+-- Treesitter config
+require("nvim-treesitter.configs").setup({
+  ensure_installed = {
+    "bash",
+    "c",
+    "cmake",
+    "cpp",
+    "lua",
+    "make",
+    "query",
+    "rust",
+    "vim",
+    "vimdoc",
+  },
+})
