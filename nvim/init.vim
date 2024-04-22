@@ -18,9 +18,9 @@ set ignorecase " Note that this applies to substitutions as well
 set smartcase
 
 " Remap hjkl to home row
-nnoremap ; l
-nnoremap l k
-nnoremap k j
-nnoremap j h
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
 
 lua require("init")
