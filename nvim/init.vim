@@ -2,8 +2,9 @@
 set number relativenumber
 set nu rnu
 
-" Vertically center cursor
-set scrolloff=999
+" Cursor
+set scrolloff=999 " Vertically center
+set cursorline " Highlight
 
 " Tabs -> spaces
 filetype plugin indent on " Use indentation based on file type
