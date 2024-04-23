@@ -15,9 +15,9 @@
 	ignorecase = false
 [diff]
 	algorithm = patience
-[init]
-	defaultBranch = main
 [gc]
 	pruneexpire = 90 days
+[init]
+	defaultBranch = main
 [rerere]
 	enabled = true
