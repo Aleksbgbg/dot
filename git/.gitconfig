@@ -1,5 +1,6 @@
 [alias]
 	ame = commit --amend --no-edit
+	amed = commit --amend -v
 	bla = blame -w -C -C -C
 	com = commit -v
 	dif = diff --staged
