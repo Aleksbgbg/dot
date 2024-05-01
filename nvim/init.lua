@@ -27,6 +27,7 @@ require("nvim-treesitter.configs").setup({
     "c",
     "cmake",
     "cpp",
+    "glsl",
     "lua",
     "make",
     "query",
@@ -36,5 +37,18 @@ require("nvim-treesitter.configs").setup({
   },
   highlight = {
     enable = true,
+  },
+})
+
+vim.filetype.add({
+  extension = {
+    vert = "glsl",
+    geom = "glsl",
+    tesc = "glsl",
+    tese = "glsl",
+    frag = "glsl",
+    mesh = "glsl",
+    task = "glsl",
+    comp = "glsl",
   },
 })
