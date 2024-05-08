@@ -10,6 +10,6 @@ git clone --depth=1 \
 mv ~/.zshrc ~/.zsh/.zshrc.orig
 ln -s "$(realpath "$(dirname "$0")")/.zshrc" ~/.zshrc
 ln -s "$(realpath "$(dirname "$0")")/.p10k.zsh" ~/.p10k.zsh
-ln -s "$(realpath "$(dirname "$0")")/include" ~/.zsh/include
+ln -n -s "$(realpath "$(dirname "$0")")/include" ~/.zsh/include
 
 chsh -s "$(which zsh)"
