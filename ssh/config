@@ -1,0 +1,16 @@
+Match host *.corp.google.com,*.c.googlers.com
+  # Multiplex connections
+  ControlMaster auto             # Opportunistic (try reuse an existing connection, otherwise create)
+  ControlPath ~/.ssh/ctrl-%C     # Use a unique hash for each connection socket
+  ControlPersist 2h              # Close connection after unused for 2hrs
+
+  # Forward ssh-agent
+  ForwardAgent yes
+
+  # Forward X11
+  ForwardX11 yes
+  ForwardX11Trusted yes          # Forwarded X11 client is a trusted client
+
+  # Disconnect 45s after server becomes unresponsive
+  ServerAliveCountMax 3
+  ServerAliveInterval 15
