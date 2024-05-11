@@ -82,6 +82,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+## Autocomplete dotfiles excluding . and .. dirs
+zstyle ':completion:*' special-dirs false
+_comp_options+=(globdots)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
