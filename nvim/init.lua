@@ -16,6 +16,8 @@ require("lazy").setup({
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "lambdalisue/vim-suda" },
+  { "nvim-tree/nvim-tree.lua" },
+  { "nvim-tree/nvim-web-devicons" },
 })
 
 -- Catpuccin colour scheme
@@ -53,3 +55,6 @@ vim.filetype.add({
     comp = "glsl",
   },
 })
+
+-- Nvim Tree config
+require("nvim-tree").setup()
