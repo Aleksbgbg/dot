@@ -96,7 +96,7 @@
  2. Move the cursor to each extra character, and type d to
     delete it.
 
- --> Thhiss senttencee haass exxtra charracterss.
+ --> This sentence has extra charactess.
      This sentence has extra characters.
 
  Once the sentence is correct, move on to the next lesson.
@@ -121,7 +121,7 @@
  4. Press Escape to exit Insert mode and return to Normal mode.
  5. Repeat until the line matches the line below it.
 
- --> Th stce misg so.
+ --> This sentence is missing some text.
      This sentence is missing some text.
 
  Note: The status bar will display your current mode.
