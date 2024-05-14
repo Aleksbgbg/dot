@@ -1,0 +1,13 @@
+[keys.normal]
+h = "no_op"
+j = "move_char_left"
+k = "move_visual_line_down"
+l = "move_visual_line_up"
+";" = "move_char_right"
+
+[keys.select]
+h = "no_op"
+j = "extend_char_left"
+k = "extend_visual_line_down"
+l = "extend_visual_line_up"
+";" = "extend_char_right"
