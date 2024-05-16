@@ -193,7 +193,7 @@
     the line and you will be able to type.
  3. Type the text necessary to match the line below.
 
- --> This sentence is miss
+ --> This sentence is missing some text.
      This sentence is missing some text.
 
 =================================================================
@@ -207,6 +207,7 @@
  2. Type o to open a line below and type your answer.
 
  --> What is the best editor?
+ helix
 
 
 
