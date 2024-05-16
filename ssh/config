@@ -11,6 +11,6 @@ Match host *.corp.google.com,*.c.googlers.com
   ForwardX11 yes
   ForwardX11Trusted yes          # Forwarded X11 client is a trusted client
 
-  # Disconnect 45s after server becomes unresponsive
+  # Disconnect 15s after server becomes unresponsive
   ServerAliveCountMax 3
-  ServerAliveInterval 15
+  ServerAliveInterval 5
