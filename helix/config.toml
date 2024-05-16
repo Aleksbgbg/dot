@@ -1,3 +1,5 @@
+theme = "catppuccin_frappe"
+
 [keys.normal]
 h = "no_op"
 j = "move_char_left"
