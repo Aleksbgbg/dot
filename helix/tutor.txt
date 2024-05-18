@@ -257,7 +257,7 @@
  4. Type d to delete the selection.
  5. Repeat for all extra words in the line.
 
- --> This sentence pencil has vacuum extra words in the it.
+ --> This sentence has extra words in it.
      This sentence has extra words in it.
 
 
@@ -324,7 +324,7 @@
  5. Repeat until the line matches the line below it.
 
  --> This paper has heavy words behind it.
-     This sentence has incorrect words in it.
+     This paper has heavy words behind it.
 
 
 
@@ -366,7 +366,7 @@
     Normal mode.
  4. Move to the B of BAZ and repeat the sequence to delete them.
 
- --> Remove the FOO BAR distracting words BAZ BIZ from this line.
+ --> Remove the distracting words from this line.
 
 
 
@@ -385,10 +385,7 @@
  4. Type x twice or type 2x to select 2 lines, and d to delete.
 
  --> 1) Roses are red,
- --> 2) Mud is fun,
  --> 3) Violets are blue,
- --> 4) I have a car,
- --> 5) Clocks tell time,
  --> 6) Sugar is sweet,
  --> 7) And so are you.
 
