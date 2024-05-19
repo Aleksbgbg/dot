@@ -1,6 +1,7 @@
 theme = "catppuccin_frappe"
 
 [editor]
+scrolloff = 999
 true-color = true
 
 [keys.normal]
