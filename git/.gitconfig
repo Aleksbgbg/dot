@@ -20,6 +20,7 @@
 	pager = delta
 [delta]
 	light = false
+	line-numbers = true
 	navigate = true
 [diff]
 	algorithm = patience
