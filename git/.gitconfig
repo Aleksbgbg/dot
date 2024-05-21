@@ -7,6 +7,7 @@
 	fix = commit --fixup
 	lol = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%cn <%ce>%Creset %s'
 	lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%cn <%ce>%Creset %s\"
+	pullr = pull --rebase
 	pushf = push --force-with-lease
 	sta = stash save --staged -m
 	swi = switch -c
@@ -18,6 +19,8 @@
 	ignorecase = false
 [diff]
 	algorithm = patience
+[pull]
+	ff = only
 [gc]
 	pruneexpire = 90 days
 [init]
