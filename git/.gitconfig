@@ -17,12 +17,19 @@
 	autocrlf = input
 	editor = nvim
 	ignorecase = false
+	pager = delta
+[delta]
+	light = false
+	navigate = true
 [diff]
 	algorithm = patience
+	colorMoved = default
 [gc]
 	pruneexpire = 90 days
 [init]
 	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only
 [merge]
 	conflictStyle = diff3
 [pull]

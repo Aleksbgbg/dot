@@ -3,5 +3,6 @@ eza             https://github.com/eza-community/eza                better ls
 fd              https://github.com/sharkdp/fd                       better find
 fzf             https://github.com/junegunn/fzf                     command-line fuzzy finder
 git-absorb      https://github.com/tummychow/git-absorb             automatic git commit --fixup
+git-delta       https://github.com/dandavison/delta                 better git diffs
 git-revise      https://github.com/mystor/git-revise                ergonomic git rebase
 ripgrep         https://github.com/BurntSushi/ripgrep               better grep
