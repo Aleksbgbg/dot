@@ -1,6 +1,6 @@
 alias cat="bat"
 alias dirs="dirs -v"
 alias less="less -R"
-alias ls="eza"
+alias ls="eza -a"
 alias please="sudo"
 alias vi="nvim"
