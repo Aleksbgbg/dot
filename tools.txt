@@ -5,4 +5,3 @@ fzf             https://github.com/junegunn/fzf                     command-line
 git-absorb      https://github.com/tummychow/git-absorb             automatic git commit --fixup
 git-revise      https://github.com/mystor/git-revise                ergonomic git rebase
 ripgrep         https://github.com/BurntSushi/ripgrep               better grep
-zoxide          https://github.com/ajeetdsouza/zoxide               smarter cd
