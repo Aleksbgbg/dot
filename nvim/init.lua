@@ -18,6 +18,14 @@ require("lazy").setup({
   { "lambdalisue/vim-suda" },
   { "nvim-tree/nvim-tree.lua" },
   { "nvim-tree/nvim-web-devicons" },
+  {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+    config = function()
+      require("dashboard").setup {}
+    end,
+    dependencies = { { "nvim-tree/nvim-web-devicons" } }
+  },
 })
 
 -- Catpuccin colour scheme
