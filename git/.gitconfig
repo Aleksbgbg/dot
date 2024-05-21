@@ -19,11 +19,11 @@
 	ignorecase = false
 [diff]
 	algorithm = patience
-[pull]
-	ff = only
 [gc]
 	pruneexpire = 90 days
 [init]
 	defaultBranch = main
+[pull]
+	ff = only
 [rerere]
 	enabled = true
