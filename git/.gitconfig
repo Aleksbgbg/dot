@@ -2,6 +2,7 @@
 	ame = commit --amend --no-edit
 	amed = commit --amend -v
 	bla = blame -w -C -C -C
+	chp = cherry-pick
 	com = commit -v
 	dif = diff --staged
 	fix = commit --fixup
