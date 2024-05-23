@@ -8,8 +8,8 @@ git clone --depth=1 \
   ~/.zsh/oh-my-zsh/custom/themes/powerlevel10k
 
 mv ~/.zshrc ~/.zsh/.zshrc.orig
-ln -s "$(dirname "$(realpath "$0")")/.zshrc" ~/.zshrc
-ln -s "$(dirname "$(realpath "$0")")/.p10k.zsh" ~/.p10k.zsh
-ln -n -s "$(dirname "$(realpath "$0")")/include" ~/.zsh/include
+ln -s -f "$(dirname "$(realpath "$0")")/.zshrc" ~/.zshrc
+ln -s -f "$(dirname "$(realpath "$0")")/.p10k.zsh" ~/.p10k.zsh
+ln -s -n -f "$(dirname "$(realpath "$0")")/include" ~/.zsh/include
 
 chsh -s "$(which zsh)"
