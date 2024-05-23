@@ -1,2 +1,11 @@
 [language-server.rust-analyzer.config.check]
 command = "clippy"
+
+[[language]]
+name = "bp"
+scope = "source.bp"
+file-types = ["bp"]
+
+[[grammar]]
+name = "bp"
+source = { git = "https://git.belanyi.fr/ambroisie/tree-sitter-bp", rev = "2326d709fb9cf73cf124fdbc803c267f851721a4" }
