@@ -11,7 +11,8 @@
 	pullr = pull --rebase
 	pushf = push --force-with-lease
 	sta = stash save --staged -m
-	swi = switch -c
+	sw = switch
+	swc = switch -c
 [color]
 	ui = auto
 [core]
