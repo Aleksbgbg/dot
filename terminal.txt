@@ -1,0 +1,6 @@
+Terminal setup:
+ - Nord theme: https://github.com/nordtheme
+ - Nerd fonts: https://github.com/ryanoasis/nerd-fonts
+   - Monospace
+   - Fira code
+   - Fira mono
