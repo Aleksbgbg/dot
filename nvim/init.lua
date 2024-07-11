@@ -27,6 +27,16 @@ require("lazy").setup({
     end,
     dependencies = { { "nvim-tree/nvim-web-devicons" } }
   },
+  {
+    "romgrk/barbar.nvim",
+    dependencies = {
+      "lewis6991/gitsigns.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    init = function() vim.g.barbar_auto_setup = false end,
+    opts = {},
+    version = "^1.8.0", -- only update when a new 1.x version is released
+  },
 })
 
 -- Catpuccin colour scheme
@@ -67,3 +77,10 @@ vim.filetype.add({
 
 -- Nvim Tree config
 require("nvim-tree").setup()
+
+-- Barbar key mappings
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
+map("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
