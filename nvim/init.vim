@@ -23,4 +23,11 @@ noremap l k
 noremap k j
 noremap j h
 
+" Run clang-format when pressing =
+augroup CLANG_FORMAT
+  au!
+  au FileType c,cpp,objc nnoremap <buffer>= :<C-u>ClangFormat<CR>
+  au FileType c,cpp,objc vnoremap <buffer>= :ClangFormat<CR>
+augroup END
+
 lua require("init")
