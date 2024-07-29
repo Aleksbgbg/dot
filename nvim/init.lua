@@ -1,3 +1,13 @@
+-- Native remappings
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+-- Remap split navigation to home row
+map("n", "<C-w>;", "<C-w>l", opts)
+map("n", "<C-w>l", "<C-w>k", opts)
+map("n", "<C-w>k", "<C-w>j", opts)
+map("n", "<C-w>j", "<C-w>h", opts)
+
 -- Lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -79,8 +89,5 @@ vim.filetype.add({
 require("nvim-tree").setup()
 
 -- Barbar key mappings
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
 map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
 map("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
