@@ -25,6 +25,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  { "neovim/nvim-lspconfig" },
   { "rhysd/vim-clang-format" },
   { "lambdalisue/vim-suda" },
   { "nvim-tree/nvim-tree.lua" },
@@ -83,6 +84,29 @@ vim.filetype.add({
     task = "glsl",
     comp = "glsl",
   },
+})
+
+-- LSP
+local lspconfig = require("lspconfig")
+lspconfig.rust_analyzer.setup({
+  on_attach = function(client, bufnr)
+    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+  end,
+  settings = {
+    ["rust-analyzer"] = {
+      imports = {
+        prefix = "self",
+      },
+      cargo = {
+        buildScripts = {
+          enable = true,
+        },
+      },
+      procMacro = {
+        enable = true
+      },
+    }
+  }
 })
 
 -- Nvim Tree config
