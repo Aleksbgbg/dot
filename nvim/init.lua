@@ -24,6 +24,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" }
+  },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "neovim/nvim-lspconfig" },
   { "rhysd/vim-clang-format" },
@@ -52,6 +56,9 @@ require("lazy").setup({
 
 -- Catpuccin colour scheme
 vim.cmd.colorscheme "catppuccin-frappe"
+
+-- Lualine config
+require("lualine").setup()
 
 -- Treesitter config
 require("nvim-treesitter.configs").setup({
