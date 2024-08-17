@@ -114,6 +114,14 @@ _comp_options+=(globdots)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Custom configurations
-for filename in ~/.zsh/include/*.zsh; do
+for filename in ~/.zsh/include/init/*.zsh; do
   source "$filename"
 done
+
+function after_init() {
+  for filename in ~/.zsh/include/after/*.zsh; do
+    source "$filename"
+  done
+}
+
+zvm_after_init_commands+=(after_init)
