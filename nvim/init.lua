@@ -30,6 +30,8 @@ require("lazy").setup({
   },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "neovim/nvim-lspconfig" },
+  { "junegunn/fzf" },
+  { "junegunn/fzf.vim" },
   { "rhysd/vim-clang-format" },
   { "lambdalisue/vim-suda" },
   { "nvim-tree/nvim-tree.lua" },
