@@ -23,6 +23,11 @@ noremap l k
 noremap k j
 noremap j h
 
+" Apply wrapping to limit git commit message body lines to 72 characters
+autocmd FileType gitcommit set textwidth=72
+" Highlight the column after the maximum text width
+set colorcolumn=+1
+
 " Run clang-format when pressing =
 augroup CLANG_FORMAT
   au!
