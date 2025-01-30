@@ -12,18 +12,17 @@
       zle set-local-history 0
   }
   zle -N vi-down-line-or-local-history
-
-  down_key=${terminfo[kcud1]}
-  bindkey -M viins "${down_key}" vi-down-line-or-local-history
-
-  up_key=${terminfo[kcuu1]}
-  bindkey -M viins "${up_key}" vi-up-line-or-local-history
 }
 
 bindkey -M vicmd j vi-backward-char
 bindkey -M vicmd k vi-down-line-or-local-history
 bindkey -M vicmd l vi-up-line-or-local-history
 bindkey -M vicmd \; vi-forward-char
+bindkey -M vicmd "^[[A" vi-up-line-or-local-history
+bindkey -M vicmd "^[[B" vi-down-line-or-local-history
+
+bindkey -M viins "^[[A" vi-up-line-or-local-history
+bindkey -M viins "^[[B" vi-down-line-or-local-history
 
 bindkey -M visual j vi-backward-char
 bindkey -M visual k down-line
