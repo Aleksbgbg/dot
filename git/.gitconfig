@@ -12,9 +12,9 @@
 	pullr = pull --rebase
 	pushf = push --force-with-lease
 	rb = rebase
-	sta = stash save --staged -m
+	sta = stash save --staged --message
 	sw = switch
-	swc = switch -c
+	swc = switch --create
 [color]
 	ui = auto
 [commit]
