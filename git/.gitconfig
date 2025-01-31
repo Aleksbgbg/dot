@@ -1,9 +1,9 @@
 [alias]
 	ame = commit --amend --no-edit
-	amed = commit --amend -v
+	amed = commit --amend
 	bla = blame -w -C -C -C
 	chp = cherry-pick
-	com = commit -v
+	com = commit
 	dif = diff --staged
 	fix = commit --fixup
 	lo = log --oneline
@@ -17,6 +17,8 @@
 	swc = switch -c
 [color]
 	ui = auto
+[commit]
+	verbose = true
 [core]
 	autocrlf = input
 	editor = nvim
