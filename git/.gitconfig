@@ -4,6 +4,7 @@
 	bla = blame -w -C -C -C
 	chp = cherry-pick
 	com = commit
+	coms = commit --sign
 	dif = diff --staged
 	fix = commit --fixup
 	lo = log --oneline
