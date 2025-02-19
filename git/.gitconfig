@@ -33,5 +33,7 @@
 	conflictStyle = diff3
 [pull]
 	ff = only
+[rebase]
+	autostash = true
 [rerere]
 	enabled = true
