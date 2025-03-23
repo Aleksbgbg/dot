@@ -8,6 +8,9 @@ map("n", "<C-w>l", "<C-w>k", opts)
 map("n", "<C-w>k", "<C-w>j", opts)
 map("n", "<C-w>j", "<C-w>h", opts)
 
+-- LSP
+vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action)
+
 -- Lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
