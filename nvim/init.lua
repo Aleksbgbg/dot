@@ -101,9 +101,6 @@ vim.filetype.add({
 -- LSP
 local lspconfig = require("lspconfig")
 lspconfig.rust_analyzer.setup({
-  on_attach = function(client, bufnr)
-    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-  end,
   settings = {
     ["rust-analyzer"] = {
       imports = {
