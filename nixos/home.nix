@@ -36,7 +36,7 @@
       env.TERM = "xterm-256color";
 
       font = {
-        size = 10;
+        size = 12;
       };
 
       scrolling.multiplier = 5;
