@@ -30,6 +30,8 @@
   programs.alacritty = {
     enable = true;
 
+    theme = "nord";
+
     settings = {
       env.TERM = "xterm-256color";
 
