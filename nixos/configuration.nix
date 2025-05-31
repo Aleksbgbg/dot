@@ -90,6 +90,7 @@
     packages = with pkgs; [
       kdePackages.kate
       git
+      alejandra
     #  thunderbird
     ];
   };
