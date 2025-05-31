@@ -55,5 +55,9 @@
     extraConfig = lib.fileContents ../tmux/.tmux.conf;
   };
 
+  programs.obs-studio = {
+    enable = true;
+  };
+
   home.stateVersion = "25.05";
 }
