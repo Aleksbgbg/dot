@@ -52,9 +52,6 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  # Enable CUPS for printing
-  services.printing.enable = true;
-
   # Pipewire sound
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
