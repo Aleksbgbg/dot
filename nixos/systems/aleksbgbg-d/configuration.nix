@@ -116,6 +116,8 @@
     # Rust development
     cargo
     rust-analyzer
+    rustfmt
+    clippy
     cargo-watch
 
     # Web development
