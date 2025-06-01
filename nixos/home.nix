@@ -6,10 +6,6 @@
   home.username = "aleksbgbg";
   home.homeDirectory = "/home/aleksbgbg";
 
-  home.packages = with pkgs; [
-    git
-  ];
-
   programs.git = {
     enable = true;
 
