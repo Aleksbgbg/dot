@@ -103,5 +103,9 @@
     enable = true;
   };
 
+  programs.vesktop = {
+    enable = true;
+  };
+
   home.stateVersion = "25.05";
 }
