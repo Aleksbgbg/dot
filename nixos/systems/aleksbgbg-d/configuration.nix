@@ -82,13 +82,6 @@
     vim
     llvmPackages_20.clangWithLibcAndBasicRtAndLibcxx
 
-    # Rust development
-    cargo
-    rust-analyzer
-    rustfmt
-    clippy
-    cargo-watch
-
     # Web development
     nodejs_24
 
