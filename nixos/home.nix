@@ -20,6 +20,7 @@
       com = "commit";
       coms = "commit --sign";
       dif = "diff --staged";
+      ff = "merge --ff-only";
       fix = "commit --fixup";
       lo = "log --oneline";
       lol = "log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%cn <%ce>%Creset %s'";
