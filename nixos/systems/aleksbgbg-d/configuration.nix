@@ -81,7 +81,6 @@
 
   environment.systemPackages = with pkgs; [
     git
-    vim
     llvmPackages_20.clangWithLibcAndBasicRtAndLibcxx
 
     # Web development
