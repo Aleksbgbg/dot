@@ -4,6 +4,8 @@
 
     ../../modules/core-pkgs.nix
     ../../modules/tools.nix
+
+    ../../modules/programs/zsh.nix
   ];
 
   # Use the systemd-boot EFI bootloader
