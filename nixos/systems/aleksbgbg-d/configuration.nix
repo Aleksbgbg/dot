@@ -5,6 +5,8 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+
+    ../../modules/rust-dev.nix
   ];
 
   # Bootloader

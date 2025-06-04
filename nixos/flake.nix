@@ -29,8 +29,6 @@
           home-manager.useUserPackages = true;
           home-manager.users.aleksbgbg = import ./home.nix;
         }
-
-        ./modules/rust-dev.nix
       ];
     };
   };
