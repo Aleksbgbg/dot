@@ -1,11 +1,8 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{...}: {
   imports = [
     ../../home/programs/git.nix
     ../../home/programs/neovim.nix
+    ../../home/programs/tmux.nix
   ];
 
   home.username = "aleksbgbg";
@@ -27,16 +24,6 @@
 
       selection.save_to_clipboard = true;
     };
-  };
-
-  programs.tmux = {
-    enable = true;
-
-    plugins = with pkgs; [
-      tmuxPlugins.nord
-    ];
-
-    extraConfig = lib.fileContents ../../../tmux/.tmux.conf;
   };
 
   programs.obs-studio = {
