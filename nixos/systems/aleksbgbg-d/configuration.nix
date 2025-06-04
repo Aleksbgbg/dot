@@ -6,7 +6,10 @@
   imports = [
     ./hardware-configuration.nix
 
+    ../../modules/core-pkgs.nix
+    ../../modules/tools.nix
     ../../modules/rust-dev.nix
+    ../../modules/web-dev.nix
   ];
 
   # Bootloader
@@ -71,24 +74,12 @@
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       kdePackages.kate
-      alejandra
     ];
   };
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "aleksbgbg";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  environment.systemPackages = with pkgs; [
-    git
-    llvmPackages_20.clangWithLibcAndBasicRtAndLibcxx
-
-    # Web development
-    nodejs_24
-
-    # Tools
-    git-revise
-  ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.monaspace
