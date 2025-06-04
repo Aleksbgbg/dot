@@ -32,6 +32,21 @@
           }
         ];
       };
+
+      streamfox-s = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = inputs;
+        modules = [
+          ./systems/streamfox-s/configuration.nix
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.aleksbgbg = import ./systems/streamfox-s/home.nix;
+          }
+        ];
+      };
     };
   };
 }
