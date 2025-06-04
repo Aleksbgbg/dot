@@ -5,21 +5,11 @@
 }: {
   imports = [
     ../../home/programs/git.nix
+    ../../home/programs/neovim.nix
   ];
 
   home.username = "aleksbgbg";
   home.homeDirectory = "/home/aleksbgbg";
-
-  programs.neovim = {
-    enable = true;
-
-    defaultEditor = true;
-
-    viAlias = true;
-
-    extraConfig = lib.fileContents ../../../nvim/init.vim;
-  };
-  home.file.".config/nvim/lua/init.lua".text = lib.fileContents ../../../nvim/init.lua;
 
   programs.alacritty = {
     enable = true;
