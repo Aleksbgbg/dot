@@ -41,7 +41,8 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "rust-overlay": "rust-overlay"
+        "rust-overlay": "rust-overlay",
+        "streamfox-live": "streamfox-live"
       }
     },
     "rust-overlay": {
@@ -62,6 +63,26 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "type": "github"
+      }
+    },
+    "streamfox-live": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1749069988,
+        "narHash": "sha256-c9YQEJxUGr8sW31EJh3eGzXth+KJvYxxnz7Tb+Bdstg=",
+        "owner": "aleksbgbg",
+        "repo": "streamfox-live",
+        "rev": "45e7a26a7ca72beeb5b466b2b24a4a173b36293c",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "aleksbgbg",
+        "repo": "streamfox-live",
+        "type": "gitlab"
       }
     }
   },

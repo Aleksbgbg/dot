@@ -1,4 +1,4 @@
-{...}: {
+{streamfox-live, ...}: {
   imports = [
     ./hardware-configuration.nix
 
@@ -6,6 +6,8 @@
     ../../modules/tools.nix
 
     ../../modules/programs/zsh.nix
+
+    streamfox-live.nixosModules.default
   ];
 
   # Use the systemd-boot EFI bootloader
@@ -44,6 +46,14 @@
 
   # Services
   services.openssh.enable = true;
+
+  services.streamfoxLive = {
+    enable = true;
+
+    publicIp = "103.205.25.90";
+    portMin = 50000;
+    portMax = 60000;
+  };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.

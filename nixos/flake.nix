@@ -9,6 +9,9 @@
 
     rust-overlay.url = "github:oxalica/rust-overlay";
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
+
+    streamfox-live.url = "gitlab:aleksbgbg/streamfox-live";
+    streamfox-live.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
