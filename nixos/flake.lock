@@ -73,10 +73,10 @@
       },
       "locked": {
         "lastModified": 1749070601,
-        "narHash": "sha256-M47XNez54hO67sC464Z4KWhIajMzhuAqChL7XjqzdbU=",
+        "narHash": "sha256-Huj+yEwZakuqOtCrNToj5Q05N1B5+FrOTqJROWhQfSQ=",
         "owner": "aleksbgbg",
         "repo": "streamfox-live",
-        "rev": "5a3b200a9797d339ef8d708463b36f51bca0edf6",
+        "rev": "56f617d0ecef9ece10ab5fd7b76f13aadf6d5ea6",
         "type": "gitlab"
       },
       "original": {
