@@ -17,19 +17,21 @@
     rust-overlay,
     ...
   } @ inputs: {
-    nixosConfigurations.aleksbgbg-d = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = inputs;
-      modules = [
-        ./systems/aleksbgbg-d/configuration.nix
+    nixosConfigurations = {
+      aleksbgbg-d = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = inputs;
+        modules = [
+          ./systems/aleksbgbg-d/configuration.nix
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.aleksbgbg = import ./systems/aleksbgbg-d/home.nix;
-        }
-      ];
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.aleksbgbg = import ./systems/aleksbgbg-d/home.nix;
+          }
+        ];
+      };
     };
   };
 }
