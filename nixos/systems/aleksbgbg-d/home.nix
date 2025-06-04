@@ -64,9 +64,9 @@
 
     viAlias = true;
 
-    extraConfig = lib.fileContents ../nvim/init.vim;
+    extraConfig = lib.fileContents ../../../nvim/init.vim;
   };
-  home.file.".config/nvim/lua/init.lua".text = lib.fileContents ../nvim/init.lua;
+  home.file.".config/nvim/lua/init.lua".text = lib.fileContents ../../../nvim/init.lua;
 
   programs.alacritty = {
     enable = true;
@@ -93,7 +93,7 @@
       tmuxPlugins.nord
     ];
 
-    extraConfig = lib.fileContents ../tmux/.tmux.conf;
+    extraConfig = lib.fileContents ../../../tmux/.tmux.conf;
   };
 
   programs.obs-studio = {

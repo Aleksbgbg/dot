@@ -27,7 +27,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.aleksbgbg = import ./home.nix;
+          home-manager.users.aleksbgbg = import ./systems/aleksbgbg-d/home.nix;
         }
       ];
     };
