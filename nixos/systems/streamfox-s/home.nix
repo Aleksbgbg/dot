@@ -4,6 +4,7 @@
     ../../home/programs/neovim.nix
     ../../home/programs/tmux.nix
     ../../home/programs/zsh.nix
+    ../../home/programs/fzf.nix
   ];
 
   home.username = "aleksbgbg";
