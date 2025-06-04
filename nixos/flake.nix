@@ -14,7 +14,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    rust-overlay,
     ...
   } @ inputs: {
     nixosConfigurations = {
