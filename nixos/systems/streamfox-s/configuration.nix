@@ -47,6 +47,21 @@
   # Services
   services.openssh.enable = true;
 
+  services.nginx = {
+    enable = true;
+
+    recommendedProxySettings = true;
+
+    virtualHosts."streamfox-live.aleksbgbg.xyz" = {
+      onlySSL = true;
+
+      sslCertificate = "/etc/ssl/certs/aleksbgbg.xyz/cert.crt";
+      sslCertificateKey = "/etc/ssl/certs/aleksbgbg.xyz/cert.key";
+
+      locations."/".proxyPass = "http://localhost:8001";
+    };
+  };
+
   services.streamfoxLive = {
     enable = true;
 
