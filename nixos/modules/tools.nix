@@ -5,5 +5,8 @@
 
     # search & discovery
     ripgrep
+
+    # large-scale edits
+    repgrep
   ];
 }
