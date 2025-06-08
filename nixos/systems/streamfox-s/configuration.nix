@@ -2,6 +2,8 @@
   imports = [
     ./hardware-configuration.nix
 
+    ../../modules/gc.nix
+
     ../../modules/core-pkgs.nix
     ../../modules/tools.nix
 
