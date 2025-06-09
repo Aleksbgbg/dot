@@ -19,6 +19,7 @@
 
   # Networking
   networking.hostName = "aleksbgbg-d";
+  networking.firewall.enable = false;
   networking.networkmanager.enable = true;
 
   # Bluetooth
