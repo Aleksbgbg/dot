@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     # git
     git-revise
+    git-absorb
 
     # search & discovery
     ripgrep
