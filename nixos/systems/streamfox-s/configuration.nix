@@ -1,4 +1,5 @@
 {
+  config,
   sops-nix,
   streamfox-live,
   ...
@@ -54,9 +55,19 @@
 
   # Secrets
   sops = {
+    defaultSopsFile = ../../secrets/streamfox.yaml;
+
     age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
     age.keyFile = "/var/lib/sops-nix/key.txt";
     age.generateKey = true;
+
+    secrets.cloudflare_origin_certificate_key = {
+      mode = "0440";
+      owner = config.users.users.nginx.name;
+      group = config.users.users.nginx.group;
+
+      restartUnits = ["nginx.service"];
+    };
   };
 
   # Services
@@ -70,8 +81,8 @@
     virtualHosts."streamfox-live.aleksbgbg.xyz" = {
       onlySSL = true;
 
-      sslCertificate = "/etc/ssl/certs/aleksbgbg.xyz/cert.crt";
-      sslCertificateKey = "/etc/ssl/certs/aleksbgbg.xyz/cert.key";
+      sslCertificate = ./ssl-certs/cert.crt;
+      sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
 
       locations."/".proxyPass = "http://localhost:8001";
     };
