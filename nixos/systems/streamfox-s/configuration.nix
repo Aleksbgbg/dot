@@ -84,7 +84,7 @@
       sslCertificate = ./ssl-certs/cert.crt;
       sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
 
-      locations."/".proxyPass = "http://localhost:8001";
+      locations."/".proxyPass = "http://localhost:9001";
     };
   };
 
@@ -92,8 +92,8 @@
     enable = true;
 
     publicIp = "103.205.25.90";
-    portMin = 50000;
-    portMax = 60000;
+    httpPort = 9001;
+    webRtcPortMux = 9002;
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
