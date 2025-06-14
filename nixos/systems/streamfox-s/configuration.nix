@@ -1,4 +1,8 @@
-{streamfox-live, ...}: {
+{
+  sops-nix,
+  streamfox-live,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
 
@@ -8,6 +12,8 @@
     ../../modules/tools.nix
 
     ../../modules/programs/zsh.nix
+
+    sops-nix.nixosModules.default
 
     streamfox-live.nixosModules.default
   ];
@@ -45,6 +51,13 @@
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  # Secrets
+  sops = {
+    age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+    age.keyFile = "/var/lib/sops-nix/key.txt";
+    age.generateKey = true;
+  };
 
   # Services
   services.openssh.enable = true;
