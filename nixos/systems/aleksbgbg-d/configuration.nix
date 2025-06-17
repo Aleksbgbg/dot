@@ -86,6 +86,10 @@
     nerd-fonts.monaspace
   ];
 
+  environment.systemPackages = with pkgs; [
+    vlc
+  ];
+
   # Programs
   programs.firefox.enable = true;
 
