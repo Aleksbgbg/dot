@@ -5,6 +5,7 @@
     ../../home/programs/tmux.nix
     ../../home/programs/zsh.nix
     ../../home/programs/fzf.nix
+    ../../home/programs/fd.nix
   ];
 
   home.username = "aleksbgbg";
