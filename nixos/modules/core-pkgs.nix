@@ -6,6 +6,9 @@
     # C compiler toolchain and libraries
     llvmPackages_20.clangWithLibcAndBasicRtAndLibcxx
 
+    # Make
+    gnumake
+
     # nix formatter
     alejandra
   ];
