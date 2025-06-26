@@ -9,6 +9,8 @@
     ../../modules/rust-dev.nix
     ../../modules/web-dev.nix
 
+    ../../modules/debug.nix
+
     ../../modules/programs/zsh.nix
   ];
 
