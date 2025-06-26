@@ -6,6 +6,7 @@
     ../../home/programs/zsh.nix
     ../../home/programs/fzf.nix
     ../../home/programs/fd.nix
+    ../../home/programs/eza.nix
   ];
 
   home.username = "aleksbgbg";
