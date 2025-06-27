@@ -77,6 +77,7 @@
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       kdePackages.kate
+      krita
     ];
   };
   services.displayManager.autoLogin.enable = true;
