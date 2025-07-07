@@ -14,6 +14,8 @@
 
     ../../modules/programs/zsh.nix
 
+    ../../modules/programs/top.nix
+
     sops-nix.nixosModules.default
 
     streamfox-live.nixosModules.default
