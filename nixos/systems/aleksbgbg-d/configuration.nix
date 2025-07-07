@@ -92,6 +92,7 @@
   environment.systemPackages = with pkgs; [
     ungoogled-chromium
     vlc
+    protonvpn-gui
   ];
 
   # Programs
