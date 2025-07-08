@@ -80,6 +80,7 @@
     packages = with pkgs; [
       kdePackages.kate
       krita
+      hyperfine
     ];
   };
   services.displayManager.autoLogin.enable = true;
