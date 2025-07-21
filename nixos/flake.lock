@@ -43,7 +43,8 @@
         "nixpkgs": "nixpkgs",
         "rust-overlay": "rust-overlay",
         "sops-nix": "sops-nix",
-        "streamfox-live": "streamfox-live"
+        "streamfox-live": "streamfox-live",
+        "streamfox-live-staging": "streamfox-live-staging"
       }
     },
     "rust-overlay": {
@@ -102,6 +103,27 @@
       },
       "original": {
         "owner": "aleksbgbg",
+        "repo": "streamfox-live",
+        "type": "gitlab"
+      }
+    },
+    "streamfox-live-staging": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753120766,
+        "narHash": "sha256-AkovHkaVJr+N84nD8F2LvXe+vkZDUyI/JKu2RKrUMQc=",
+        "owner": "aleksbgbg",
+        "repo": "streamfox-live",
+        "rev": "441497681ce8b81938d48ab4b78ce120d83d4f62",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "aleksbgbg",
+        "ref": "staging",
         "repo": "streamfox-live",
         "type": "gitlab"
       }

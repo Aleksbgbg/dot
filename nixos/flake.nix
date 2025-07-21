@@ -15,6 +15,9 @@
 
     streamfox-live.url = "gitlab:aleksbgbg/streamfox-live";
     streamfox-live.inputs.nixpkgs.follows = "nixpkgs";
+
+    streamfox-live-staging.url = "gitlab:aleksbgbg/streamfox-live/staging";
+    streamfox-live-staging.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {

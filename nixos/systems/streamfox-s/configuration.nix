@@ -2,6 +2,7 @@
   config,
   sops-nix,
   streamfox-live,
+  streamfox-live-staging,
   ...
 }: {
   imports = [
@@ -80,13 +81,23 @@
 
     recommendedProxySettings = true;
 
-    virtualHosts."streamfox-live.aleksbgbg.xyz" = {
-      onlySSL = true;
+    virtualHosts = {
+      "streamfox-live.aleksbgbg.xyz" = {
+        onlySSL = true;
 
-      sslCertificate = ./ssl-certs/cert.crt;
-      sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
+        sslCertificate = ./ssl-certs/cert.crt;
+        sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
 
-      locations."/".proxyPass = "http://localhost:9001";
+        locations."/".proxyPass = "http://localhost:9001";
+      };
+      "staging-streamfox-live.aleksbgbg.xyz" = {
+        onlySSL = true;
+
+        sslCertificate = ./ssl-certs/cert.crt;
+        sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
+
+        locations."/".proxyPass = "http://localhost:9003";
+      };
     };
   };
 
@@ -96,6 +107,28 @@
     publicIp = "103.205.25.90";
     httpPort = 9001;
     webRtcPortMux = 9002;
+  };
+
+  containers.staging = {
+    autoStart = true;
+
+    config = {...}: {
+      imports = [
+        streamfox-live-staging.nixosModules.default
+      ];
+
+      services.streamfoxLive = {
+        enable = true;
+
+        publicIp = "103.205.25.90";
+        httpPort = 9003;
+        webRtcPortMux = 9004;
+
+        debug.webRtcLogLevel = "debug";
+      };
+
+      system.stateVersion = "25.05";
+    };
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
