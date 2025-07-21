@@ -7,5 +7,6 @@
   environment.systemPackages = with pkgs; [
     (rust-bin.selectLatestNightlyWith (toolchain: toolchain.complete))
     cargo-watch
+    cargo-edit
   ];
 }
