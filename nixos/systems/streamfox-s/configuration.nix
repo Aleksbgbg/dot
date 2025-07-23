@@ -1,6 +1,7 @@
 {
   config,
   sops-nix,
+  streamfox,
   streamfox-live,
   streamfox-live-staging,
   ...
@@ -18,6 +19,8 @@
     ../../modules/programs/top.nix
 
     sops-nix.nixosModules.default
+
+    streamfox.nixosModules.default
 
     streamfox-live.nixosModules.default
   ];
@@ -81,7 +84,18 @@
 
     recommendedProxySettings = true;
 
+    clientMaxBodySize = "100m";
+
     virtualHosts = {
+      "streamfox.aleksbgbg.xyz" = {
+        onlySSL = true;
+
+        sslCertificate = ./ssl-certs/cert.crt;
+        sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
+
+        locations."/".proxyPass = "http://localhost:9000";
+      };
+
       "streamfox-live.aleksbgbg.xyz" = {
         onlySSL = true;
 
@@ -99,6 +113,13 @@
         locations."/".proxyPass = "http://localhost:9003";
       };
     };
+  };
+
+  services.streamfox = {
+    enable = true;
+
+    port = 9000;
+    secureUrls = true;
   };
 
   services.streamfoxLive = {
