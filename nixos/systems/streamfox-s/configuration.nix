@@ -105,7 +105,7 @@
         sslCertificate = ./ssl-certs/cert.crt;
         sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
 
-        locations."/".proxyPass = "http://localhost:9001";
+        locations."/".proxyPass = "http://unix:/var/run/streamfox-live/http.sock";
       };
       "staging-streamfox-live.aleksbgbg.xyz" = {
         onlySSL = true;
@@ -113,7 +113,7 @@
         sslCertificate = ./ssl-certs/cert.crt;
         sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
 
-        locations."/".proxyPass = "http://localhost:9003";
+        locations."/".proxyPass = "http://unix:/var/run/staging/streamfox-live/http.sock";
       };
     };
   };
@@ -128,13 +128,25 @@
   services.streamfoxLive = {
     enable = true;
 
+    httpUnixSocket = true;
+
     publicIp = "103.205.25.90";
-    httpPort = 9001;
     webRtcPortMux = 9002;
   };
 
+  systemd.tmpfiles.rules = [
+    # Type Path Mode User Group Age Argument
+    "d /var/run/staging 0777 root root - -"
+    "d /var/run/staging/streamfox-live 0777 root root - -"
+  ];
+
   containers.staging = {
     autoStart = true;
+
+    bindMounts."/var/run/streamfox-live" = {
+      hostPath = "/var/run/staging/streamfox-live";
+      isReadOnly = false;
+    };
 
     config = {...}: {
       imports = [
@@ -144,8 +156,9 @@
       services.streamfoxLive = {
         enable = true;
 
+        httpUnixSocket = true;
+
         publicIp = "103.205.25.90";
-        httpPort = 9003;
         webRtcPortMux = 9004;
 
         debug.webRtcLogLevel = "debug";

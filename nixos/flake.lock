@@ -115,11 +115,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753120766,
-        "narHash": "sha256-AkovHkaVJr+N84nD8F2LvXe+vkZDUyI/JKu2RKrUMQc=",
+        "lastModified": 1753912763,
+        "narHash": "sha256-G6JkH/mN8VTcTJB/T03lCz2Io65TQzhAmvnJjDA9LtY=",
         "owner": "aleksbgbg",
         "repo": "streamfox-live",
-        "rev": "441497681ce8b81938d48ab4b78ce120d83d4f62",
+        "rev": "9f47bc506268f6dadfd4feb046e1826cb26cc332",
         "type": "gitlab"
       },
       "original": {
@@ -135,11 +135,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753120766,
-        "narHash": "sha256-AkovHkaVJr+N84nD8F2LvXe+vkZDUyI/JKu2RKrUMQc=",
+        "lastModified": 1753912763,
+        "narHash": "sha256-G6JkH/mN8VTcTJB/T03lCz2Io65TQzhAmvnJjDA9LtY=",
         "owner": "aleksbgbg",
         "repo": "streamfox-live",
-        "rev": "441497681ce8b81938d48ab4b78ce120d83d4f62",
+        "rev": "9f47bc506268f6dadfd4feb046e1826cb26cc332",
         "type": "gitlab"
       },
       "original": {
