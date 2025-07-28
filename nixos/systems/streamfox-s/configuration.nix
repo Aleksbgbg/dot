@@ -85,6 +85,42 @@
     recommendedProxySettings = true;
 
     virtualHosts = {
+      "seafile.aleksbgbg.xyz" = {
+        onlySSL = true;
+
+        sslCertificate = ./ssl-certs/cert.crt;
+        sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
+
+        locations = {
+          "/" = {
+            proxyPass = "http://unix:/run/seahub/gunicorn.sock";
+            extraConfig = ''
+              client_max_body_size 0;
+
+              proxy_read_timeout 1200s;
+
+              proxy_set_header X-Real-IP $remote_addr;
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+              proxy_set_header X-Forwarded-Host $server_name;
+            '';
+          };
+          "/seafhttp" = {
+            proxyPass = "http://unix:/run/seafile/server.sock";
+            extraConfig = ''
+              rewrite ^/seafhttp/(.*)$ /$1 break;
+
+              proxy_connect_timeout 36000s;
+              proxy_read_timeout 36000s;
+              proxy_send_timeout 36000s;
+              send_timeout 36000s;
+
+              proxy_set_header Host "seafile.aleksbgbg.xyz";
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            '';
+          };
+        };
+      };
+
       "streamfox.aleksbgbg.xyz" = {
         onlySSL = true;
 
@@ -116,6 +152,17 @@
         locations."/".proxyPass = "http://unix:/var/run/staging/streamfox-live/http.sock";
       };
     };
+  };
+
+  services.seafile = {
+    enable = true;
+
+    adminEmail = "admin@aleksbgbg.xyz";
+    initialAdminPassword = "123456";
+
+    ccnetSettings.General.SERVICE_URL = "https://seafile.aleksbgbg.xyz";
+
+    seafileSettings.fileserver.host = "unix:/run/seafile/server.sock";
   };
 
   services.streamfox = {
