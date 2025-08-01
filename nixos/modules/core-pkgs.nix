@@ -11,5 +11,8 @@
 
     # nix formatter
     alejandra
+
+    # Additional Unix utility scripts
+    moreutils
   ];
 }
