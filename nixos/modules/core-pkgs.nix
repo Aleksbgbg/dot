@@ -4,7 +4,7 @@
     git
 
     # C compiler toolchain and libraries
-    llvmPackages_20.clangWithLibcAndBasicRtAndLibcxx
+    llvmPackages.clangWithLibcAndBasicRtAndLibcxx
 
     # Make
     gnumake
