@@ -21,4 +21,8 @@
 
     initContent = lib.fileContents ./vi.zsh;
   };
+
+  programs.starship = {
+    enable = true;
+  };
 }
