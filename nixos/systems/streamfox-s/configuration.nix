@@ -177,7 +177,7 @@
 
     httpUnixSocket = true;
 
-    publicIp = "103.205.25.90";
+    publicIp = "147.12.186.138";
     webRtcPortMux = 9002;
   };
 
@@ -205,7 +205,7 @@
 
         httpUnixSocket = true;
 
-        publicIp = "103.205.25.90";
+        publicIp = "147.12.186.138";
         webRtcPortMux = 9004;
 
         debug.webRtcLogLevel = "debug";
