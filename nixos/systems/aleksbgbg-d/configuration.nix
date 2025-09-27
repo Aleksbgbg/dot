@@ -44,6 +44,15 @@
     LC_TELEPHONE = "en_GB.UTF-8";
     LC_TIME = "en_GB.UTF-8";
   };
+  ## IME (Input Method Editor) for Korean
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+
+    fcitx5.addons = with pkgs; [
+      fcitx5-hangul
+    ];
+  };
 
   # X11 windowing
   services.xserver.enable = true;
@@ -88,6 +97,7 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.monaspace
+    noto-fonts-cjk-sans
   ];
 
   environment.systemPackages = with pkgs; [
