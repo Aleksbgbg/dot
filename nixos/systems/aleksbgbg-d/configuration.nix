@@ -8,7 +8,6 @@
     ../../modules/tools.nix
     ../../modules/rust-dev.nix
     ../../modules/web-dev.nix
-    ../../modules/flutter-dev.nix
 
     ../../modules/debug.nix
 
