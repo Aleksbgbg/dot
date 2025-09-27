@@ -49,8 +49,8 @@
   services.xserver.enable = true;
   ## keymap
   services.xserver.xkb = {
-    layout = "gb";
-    variant = "";
+    layout = "gb,bg";
+    variant = ",phonetic";
   };
 
   # Console keymap
