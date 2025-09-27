@@ -7,6 +7,8 @@
     ../../home/programs/fzf.nix
     ../../home/programs/fd.nix
     ../../home/programs/eza.nix
+
+    ../../home/programs/direnv.nix
   ];
 
   home.username = "aleksbgbg";
