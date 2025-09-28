@@ -104,6 +104,7 @@
     ungoogled-chromium
     vlc
     protonvpn-gui
+    qbittorrent
   ];
 
   # Programs
