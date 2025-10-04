@@ -105,6 +105,7 @@
     vlc
     protonvpn-gui
     qbittorrent
+    gparted
   ];
 
   # Programs
