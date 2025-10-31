@@ -21,7 +21,6 @@
     sops-nix.nixosModules.default
 
     streamfox.nixosModules.default
-
     streamfox-live.nixosModules.default
   ];
 
