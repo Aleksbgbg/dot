@@ -194,7 +194,7 @@
 
         httpUnixSocket = true;
 
-        publicIp = "147.12.186.138";
+        publicIp = "147.12.196.53";
         webRtcPortMux = 9004;
 
         debug.webRtcLogLevel = "debug";
