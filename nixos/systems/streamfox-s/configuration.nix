@@ -154,17 +154,6 @@
     };
   };
 
-  services.seafile = {
-    enable = true;
-
-    adminEmail = "admin@aleksbgbg.xyz";
-    initialAdminPassword = "123456";
-
-    ccnetSettings.General.SERVICE_URL = "https://seafile.aleksbgbg.xyz";
-
-    seafileSettings.fileserver.host = "unix:/run/seafile/server.sock";
-  };
-
   services.streamfox = {
     enable = true;
 
