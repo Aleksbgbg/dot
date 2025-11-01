@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
+    flake-utils.url = "github:numtide/flake-utils";
+
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -21,6 +23,11 @@
 
     streamfox-live-staging.url = "gitlab:aleksbgbg/streamfox-live/staging";
     streamfox-live-staging.inputs.nixpkgs.follows = "nixpkgs";
+
+    mdb.url = "gitlab:aleksbgbg/mdb";
+    mdb.inputs.nixpkgs.follows = "nixpkgs";
+    mdb.inputs.flake-utils.follows = "flake-utils";
+    mdb.inputs.rust-overlay.follows = "rust-overlay";
   };
 
   outputs = {
