@@ -4,6 +4,7 @@
   streamfox,
   streamfox-live,
   streamfox-live-staging,
+  mdb,
   ...
 }: {
   imports = [
@@ -22,6 +23,7 @@
 
     streamfox.nixosModules.default
     streamfox-live.nixosModules.default
+    mdb.nixosModules.default
   ];
 
   # Use the systemd-boot EFI bootloader
@@ -114,6 +116,15 @@
 
         locations."/".proxyPass = "http://unix:/var/run/staging/streamfox-live/http.sock";
       };
+
+      "mdb.aleksbgbg.xyz" = {
+        onlySSL = true;
+
+        sslCertificate = ./ssl-certs/cert.crt;
+        sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
+
+        locations."/".proxyPass = "http://unix:/var/run/mdb/http.sock";
+      };
     };
   };
 
@@ -131,6 +142,12 @@
 
     publicIp = "147.12.196.53";
     webRtcPortMux = 9002;
+  };
+
+  services.mdb = {
+    enable = true;
+
+    unixSocket = true;
   };
 
   systemd.tmpfiles.rules = [
