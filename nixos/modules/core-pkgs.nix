@@ -1,4 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  nix-index-database,
+  ...
+}: {
+  imports = [
+    nix-index-database.nixosModules.nix-index
+  ];
+
   environment.systemPackages = with pkgs; [
     # Source control
     git
@@ -15,4 +23,7 @@
     # Additional Unix utility scripts
     moreutils
   ];
+
+  # Easy package shells
+  programs.nix-index-database.comma.enable = true;
 }
