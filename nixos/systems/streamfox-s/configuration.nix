@@ -4,6 +4,7 @@
   streamfox,
   streamfox-live,
   streamfox-live-staging,
+  opencraft,
   mdb,
   ...
 }: {
@@ -23,6 +24,7 @@
 
     streamfox.nixosModules.default
     streamfox-live.nixosModules.default
+    opencraft.nixosModules.default
     mdb.nixosModules.default
   ];
 
@@ -117,6 +119,15 @@
         locations."/".proxyPass = "http://unix:/var/run/staging/streamfox-live/http.sock";
       };
 
+      "opencraft.aleksbgbg.xyz" = {
+        onlySSL = true;
+
+        sslCertificate = ./ssl-certs/cert.crt;
+        sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
+
+        root = "/var/run/opencraft/frontend";
+      };
+
       "mdb.aleksbgbg.xyz" = {
         onlySSL = true;
 
@@ -142,6 +153,10 @@
 
     publicIp = "147.12.196.53";
     webRtcPortMux = 9002;
+  };
+
+  services.opencraft = {
+    enable = true;
   };
 
   services.mdb = {

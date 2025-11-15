@@ -101,6 +101,33 @@
         "type": "github"
       }
     },
+    "opencraft": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": [
+          "rust-overlay"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763235631,
+        "narHash": "sha256-9n9O3B4nDBTU7SizPldwjBuDjVyd+BZtUK5Pkr/mfJg=",
+        "ref": "refs/heads/main",
+        "rev": "51dbe77a28c201c7fcb036aa214046f0e4011620",
+        "revCount": 84,
+        "submodules": true,
+        "type": "git",
+        "url": "https://gitlab.com/aleksbgbg/opencraft"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.com/aleksbgbg/opencraft"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -108,6 +135,7 @@
         "mdb": "mdb",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs",
+        "opencraft": "opencraft",
         "rust-overlay": "rust-overlay",
         "sops-nix": "sops-nix",
         "streamfox": "streamfox",
