@@ -114,11 +114,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763235631,
-        "narHash": "sha256-9n9O3B4nDBTU7SizPldwjBuDjVyd+BZtUK5Pkr/mfJg=",
+        "lastModified": 1763415316,
+        "narHash": "sha256-NgX4qwI5a+0VQkks4uJqlPDpviFEcscSFlEWcwCoy3M=",
         "ref": "refs/heads/main",
-        "rev": "51dbe77a28c201c7fcb036aa214046f0e4011620",
-        "revCount": 84,
+        "rev": "719824e552a1cd0d346539f75286c0f2aee4ae03",
+        "revCount": 92,
         "submodules": true,
         "type": "git",
         "url": "https://gitlab.com/aleksbgbg/opencraft"
