@@ -86,6 +86,7 @@
     packages = with pkgs; [
       kdePackages.kate
       krita
+      blender
       hyperfine
     ];
   };
