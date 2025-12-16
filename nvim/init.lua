@@ -14,7 +14,7 @@ vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action)
 -- Automatic formatting
 vim.api.nvim_create_augroup("AutoFormat", {})
 vim.api.nvim_create_autocmd(
-  "BufWritePost",
+  "BufWritePre",
   {
     pattern = "*.rs",
     group = "AutoFormat",
