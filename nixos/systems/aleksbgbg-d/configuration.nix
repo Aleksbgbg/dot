@@ -87,6 +87,7 @@
       kdePackages.kate
       krita
       blender
+      renderdoc
       hyperfine
     ];
   };
