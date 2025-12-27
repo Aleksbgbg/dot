@@ -107,6 +107,7 @@
     protonvpn-gui
     qbittorrent
     gparted
+    gimp
   ];
 
   # Programs
