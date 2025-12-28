@@ -70,6 +70,8 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.aleksbgbg = import ./systems/streamfox-s/home.nix;
+
+            home-manager.users.games = import ./systems/streamfox-s/users/games_home.nix;
           }
         ];
       };

@@ -54,10 +54,24 @@
   };
   console.keyMap = "uk";
 
+  users.groups.games = {};
+  users.users.games = {
+    isNormalUser = true;
+    description = "Game server admin";
+
+    group = "games";
+
+    createHome = true;
+    homeMode = "770";
+  };
+
   users.users.aleksbgbg = {
     isNormalUser = true;
     description = "Aleks Todorov";
-    extraGroups = ["wheel"];
+    extraGroups = [
+      "wheel"
+      "games"
+    ];
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
