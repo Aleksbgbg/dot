@@ -108,6 +108,7 @@
     qbittorrent
     gparted
     gimp
+    syncplay
   ];
 
   # Programs
