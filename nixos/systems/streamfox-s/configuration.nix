@@ -7,7 +7,9 @@
   opencraft,
   mdb,
   ...
-}: {
+}: let
+  publicIp = "147.12.196.53";
+in {
   imports = [
     ./hardware-configuration.nix
 
@@ -165,7 +167,7 @@
 
     httpUnixSocket = true;
 
-    publicIp = "147.12.196.53";
+    inherit publicIp;
     webRtcPortMux = 9002;
   };
 
@@ -203,7 +205,7 @@
 
         httpUnixSocket = true;
 
-        publicIp = "147.12.196.53";
+        inherit publicIp;
         webRtcPortMux = 9004;
 
         debug.webRtcLogLevel = "debug";
