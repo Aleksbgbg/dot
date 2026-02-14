@@ -8,7 +8,7 @@
   mdb,
   ...
 }: let
-  publicIp = "147.12.196.53";
+  publicIp = "147.12.186.186";
 in {
   imports = [
     ./hardware-configuration.nix
