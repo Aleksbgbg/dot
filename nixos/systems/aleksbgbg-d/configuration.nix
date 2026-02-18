@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  lib,
+  sops-nix,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
 
@@ -11,6 +17,8 @@
     ../../modules/programs/zsh.nix
 
     ../../modules/programs/top.nix
+
+    sops-nix.nixosModules.default
   ];
 
   # Bootloader
@@ -113,6 +121,62 @@
 
   # Programs
   programs.firefox.enable = true;
+
+  # Secrets
+  sops = {
+    defaultSopsFile = ../../secrets/aleksbgbg.yaml;
+
+    age.sshKeyPaths = ["/home/aleksbgbg/.ssh/id_ed25519"];
+
+    secrets.gitlab_runner_config = {
+      mode = "0440";
+      owner = config.users.users.aleksbgbg.name;
+      group = config.users.users.aleksbgbg.group;
+
+      restartUnits = ["gitlab-runner.service"];
+    };
+  };
+
+
+  # GitLab Runner
+  ## Networking
+  boot.kernel.sysctl."net.ipv4.ip_forward" = true;
+
+  ## Docker
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+    autoPrune.enable = true;
+  };
+
+  services.gitlab-runner = {
+    enable = true;
+    settings = {
+      concurrent = 5;
+      listen_address = "127.0.0.1:9252";
+    };
+
+    services.runner = {
+      # community managed, automatically updated nix image with flakes + commands pre-enabled
+      dockerImage = "nixpkgs/nix-flakes:nixos-${config.system.nixos.release}-${pkgs.system}";
+      dockerVolumes = [
+        # passthrough bash & grep for gitlab ci (used inside the executor, not contained in the base image)
+        "${lib.getExe pkgs.pkgsStatic.gnugrep}:/usr/bin/grep:ro"
+        "${lib.getExe pkgs.pkgsStatic.bash}:/usr/bin/sh:ro"
+        "${lib.getExe pkgs.pkgsStatic.bash}:/usr/bin/bash:ro"
+      ];
+
+      registrationFlags = [
+        "--docker-pull-policy=if-not-present"
+        "--docker-allowed-pull-policies=if-not-present"
+        "--docker-allowed-pull-policies=always"
+      ];
+
+      authenticationTokenConfigFile = "/run/secrets/gitlab_runner_config";
+
+      requestConcurrency = 1024;
+    };
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
