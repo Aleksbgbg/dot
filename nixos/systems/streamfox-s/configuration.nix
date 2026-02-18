@@ -140,6 +140,11 @@ in {
         sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
 
         root = "/var/run/opencraft/frontend";
+
+        extraConfig = ''
+          add_header Cross-Origin-Opener-Policy same-origin;
+          add_header Cross-Origin-Embedder-Policy require-corp;
+        '';
       };
 
       "mdb.aleksbgbg.xyz" = {

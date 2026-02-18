@@ -1,5 +1,28 @@
 {
   "nodes": {
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "opencraft",
+          "naersk",
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1752475459,
+        "narHash": "sha256-z6QEu4ZFuHiqdOPbYss4/Q8B0BFhacR8ts6jO/F/aOU=",
+        "owner": "nix-community",
+        "repo": "fenix",
+        "rev": "bf0d6f70f4c9a9cf8845f992105652173f4b617f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "fenix",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -65,6 +88,28 @@
         "type": "gitlab"
       }
     },
+    "naersk": {
+      "inputs": {
+        "fenix": "fenix",
+        "nixpkgs": [
+          "opencraft",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1769799857,
+        "narHash": "sha256-88IFXZ7Sa1vxbz5pty0Io5qEaMQMMUPMonLa3Ls/ss4=",
+        "owner": "nix-community",
+        "repo": "naersk",
+        "rev": "9d4ed44d8b8cecdceb1d6fd76e74123d90ae6339",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "naersk",
+        "type": "github"
+      }
+    },
     "nix-index-database": {
       "inputs": {
         "nixpkgs": [
@@ -106,6 +151,7 @@
         "flake-utils": [
           "flake-utils"
         ],
+        "naersk": "naersk",
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -114,11 +160,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771085995,
-        "narHash": "sha256-B6Fn1y+bobadBqPQ4PZ9DP8BYyL2Q5OpFPeoh0mAdnI=",
+        "lastModified": 1771439120,
+        "narHash": "sha256-Jq/bT4NK2qg70XyRqwx5up+DvtuKzOfhgHCmaiLdK3E=",
         "ref": "refs/heads/main",
-        "rev": "998ba9a4d245182754270f49d2912abda42d0d4f",
-        "revCount": 126,
+        "rev": "55195c3fa8c4811f8ae0ef9a116e86de4b3dead7",
+        "revCount": 189,
         "submodules": true,
         "type": "git",
         "url": "https://gitlab.com/aleksbgbg/opencraft"
@@ -141,6 +187,23 @@
         "streamfox": "streamfox",
         "streamfox-live": "streamfox-live",
         "streamfox-live-staging": "streamfox-live-staging"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1752428706,
+        "narHash": "sha256-EJcdxw3aXfP8Ex1Nm3s0awyH9egQvB2Gu+QEnJn2Sfg=",
+        "owner": "rust-lang",
+        "repo": "rust-analyzer",
+        "rev": "591e3b7624be97e4443ea7b5542c191311aa141d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
       }
     },
     "rust-overlay": {
