@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   sops-nix,
   streamfox,
   streamfox-live,
@@ -73,6 +74,12 @@ in {
     extraGroups = [
       "wheel"
       "games"
+      "navidrome"
+    ];
+
+    packages = with pkgs; [
+      deno
+      ffmpeg
     ];
   };
 
@@ -155,6 +162,15 @@ in {
 
         locations."/".proxyPass = "http://unix:/var/run/mdb/http.sock";
       };
+
+      "music.aleksbgbg.xyz" = {
+        onlySSL = true;
+
+        sslCertificate = ./ssl-certs/cert.crt;
+        sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
+
+        locations."/".proxyPass = "http://localhost:4533";
+      };
     };
   };
 
@@ -182,6 +198,12 @@ in {
     enable = true;
 
     unixSocket = true;
+  };
+
+  services.navidrome = {
+    enable = true;
+
+    settings.MusicFolder = "/run/music";
   };
 
   systemd.tmpfiles.rules = [
