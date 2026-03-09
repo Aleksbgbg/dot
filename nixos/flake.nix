@@ -31,11 +31,6 @@
     opencraft.inputs.nixpkgs.follows = "nixpkgs";
     opencraft.inputs.flake-utils.follows = "flake-utils";
     opencraft.inputs.rust-overlay.follows = "rust-overlay";
-
-    mdb.url = "gitlab:aleksbgbg/mdb";
-    mdb.inputs.nixpkgs.follows = "nixpkgs";
-    mdb.inputs.flake-utils.follows = "flake-utils";
-    mdb.inputs.rust-overlay.follows = "rust-overlay";
   };
 
   outputs = {

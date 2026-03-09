@@ -6,7 +6,6 @@
   streamfox-live,
   streamfox-live-staging,
   opencraft,
-  mdb,
   ...
 }: let
   publicIp = "147.12.186.164";
@@ -28,7 +27,6 @@ in {
     streamfox.nixosModules.default
     streamfox-live.nixosModules.default
     opencraft.nixosModules.default
-    mdb.nixosModules.default
   ];
 
   # Use the systemd-boot EFI bootloader
@@ -154,15 +152,6 @@ in {
         '';
       };
 
-      "mdb.aleksbgbg.xyz" = {
-        onlySSL = true;
-
-        sslCertificate = ./ssl-certs/cert.crt;
-        sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
-
-        locations."/".proxyPass = "http://unix:/var/run/mdb/http.sock";
-      };
-
       "music.aleksbgbg.xyz" = {
         onlySSL = true;
 
@@ -192,12 +181,6 @@ in {
 
   services.opencraft = {
     enable = true;
-  };
-
-  services.mdb = {
-    enable = true;
-
-    unixSocket = true;
   };
 
   services.navidrome = {
