@@ -31,6 +31,11 @@
     opencraft.inputs.nixpkgs.follows = "nixpkgs";
     opencraft.inputs.flake-utils.follows = "flake-utils";
     opencraft.inputs.rust-overlay.follows = "rust-overlay";
+
+    maple.url = "git+https://gitlab.com/aleksbgbg/maple";
+    maple.inputs.nixpkgs.follows = "nixpkgs";
+    maple.inputs.flake-utils.follows = "flake-utils";
+    maple.inputs.rust-overlay.follows = "rust-overlay";
   };
 
   outputs = {

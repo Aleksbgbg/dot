@@ -18,6 +18,8 @@
 
     ../../modules/programs/top.nix
 
+    ../../modules/programs/maple.nix
+
     sops-nix.nixosModules.default
   ];
 
