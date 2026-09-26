@@ -117,7 +117,7 @@ lspconfig.rust_analyzer.setup({
   settings = {
     ["rust-analyzer"] = {
       imports = {
-        prefix = "self",
+        prefix = "crate",
       },
       cargo = {
         buildScripts = {
