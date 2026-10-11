@@ -66,6 +66,11 @@ in {
 
     createHome = true;
     homeMode = "770";
+
+    openssh.authorizedKeys.keyFiles = [
+      ./ssh-keys/aleksbgbg.txt
+      ./ssh-keys/daqy.txt
+    ];
   };
 
   users.users.aleksbgbg = {
@@ -80,6 +85,10 @@ in {
     packages = with pkgs; [
       deno
       ffmpeg
+    ];
+
+    openssh.authorizedKeys.keyFiles = [
+      ./ssh-keys/aleksbgbg.txt
     ];
   };
 
@@ -101,7 +110,12 @@ in {
   };
 
   # Services
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+
+    settings.PasswordAuthentication = false;
+    settings.KbdInteractiveAuthentication = false;
+  };
 
   services.nginx = {
     enable = true;
