@@ -116,9 +116,12 @@
     vlc
     protonvpn-gui
     qbittorrent
-    gparted
     gimp
     syncplay
+
+    # gparted
+    ntfs3g
+    gparted
   ];
 
   # Programs
