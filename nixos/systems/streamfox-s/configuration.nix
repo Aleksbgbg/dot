@@ -199,6 +199,11 @@ in {
     enable = true;
   };
 
+  fileSystems."/run/music" = {
+    device = "/home/aleksbgbg/music";
+    fsType = "none";
+    options = ["bind"];
+  };
   services.navidrome = {
     enable = true;
 
