@@ -36,6 +36,11 @@
     maple.inputs.nixpkgs.follows = "nixpkgs";
     maple.inputs.flake-utils.follows = "flake-utils";
     maple.inputs.rust-overlay.follows = "rust-overlay";
+
+    mm.url = "git+https://gitlab.com/aleksbgbg/mm";
+    mm.inputs.nixpkgs.follows = "nixpkgs";
+    mm.inputs.flake-utils.follows = "flake-utils";
+    mm.inputs.rust-overlay.follows = "rust-overlay";
   };
 
   outputs = {

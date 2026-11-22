@@ -88,6 +88,32 @@
         "url": "https://gitlab.com/aleksbgbg/maple"
       }
     },
+    "mm": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": [
+          "rust-overlay"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795368227,
+        "narHash": "sha256-EGNmZnrNMhgCVdBvdXWqnCMzK1ZVmuyhWpOoYDr1U4Q=",
+        "ref": "refs/heads/main",
+        "rev": "f481c7dd1f9590c6b06e957ec33b93a3335a08a1",
+        "revCount": 1,
+        "type": "git",
+        "url": "https://gitlab.com/aleksbgbg/mm"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.com/aleksbgbg/mm"
+      }
+    },
     "naersk": {
       "inputs": {
         "fenix": "fenix",
@@ -179,6 +205,7 @@
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "maple": "maple",
+        "mm": "mm",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs",
         "opencraft": "opencraft",

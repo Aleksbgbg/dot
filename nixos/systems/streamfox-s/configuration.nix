@@ -6,6 +6,7 @@
   streamfox-live,
   streamfox-live-staging,
   opencraft,
+  mm,
   ...
 }: let
   publicIp = "147.12.196.38";
@@ -29,6 +30,7 @@ in {
     streamfox.nixosModules.default
     streamfox-live.nixosModules.default
     opencraft.nixosModules.default
+    mm.nixosModules.default
   ];
 
   # Use the systemd-boot EFI bootloader
@@ -176,6 +178,14 @@ in {
 
         locations."/".proxyPass = "http://localhost:4533";
       };
+      "manage.aleksbgbg.xyz" = {
+        onlySSL = true;
+
+        sslCertificate = ./ssl-certs/cert.crt;
+        sslCertificateKey = "/run/secrets/cloudflare_origin_certificate_key";
+
+        locations."/".proxyPass = "http://unix:/var/run/mm/http.sock";
+      };
     };
   };
 
@@ -208,6 +218,12 @@ in {
     enable = true;
 
     settings.MusicFolder = "/run/music";
+  };
+  services.mm = {
+    enable = true;
+
+    httpUnixSocket = true;
+    outputDir = "/run/music";
   };
 
   systemd.tmpfiles.rules = [
