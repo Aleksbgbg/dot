@@ -101,11 +101,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795368418,
-        "narHash": "sha256-RP708zaCA5YNE27xsDhSRSx32oe/lttlVtEGhSWKhtU=",
+        "lastModified": 1795377428,
+        "narHash": "sha256-YncWTW/+piO9iGrq6gV76NyAe6rAHCkmA9U2sqhq8rc=",
         "ref": "refs/heads/main",
-        "rev": "3a87bd04f4cd5924bdec89afb6a0bece7c918666",
-        "revCount": 2,
+        "rev": "b71df65fd315c1dac06a3382f88b38d3e14e48dc",
+        "revCount": 6,
         "type": "git",
         "url": "https://gitlab.com/aleksbgbg/mm"
       },
